@@ -1,0 +1,26 @@
+
+<form (ngSubmit)="addProduct()">
+    <div>
+        <label for="giftName"> Gift Name</label>
+        <input type="text" name="giftName" [(ngModel)]="giftName" placeholder="Enter giftName" required autofocus>
+     </div>
+     <br>
+     <div>
+    
+        <label for="giftPrice"> Gift Price</label>
+        <input type="price" name="price" [(ngModel)]="giftPrice" placeholder="Enter giftPrice" required autofocus>
+     </div>
+     <br>
+
+     <div>
+    
+        <label for="imageUrl"> Gift Image URl</label>
+        <input type="text" name="imageUrl" [(ngModel)]="imageUrl" placeholder="Enter Image url" required autofocus>
+     </div>
+     <br>
+
+
+    <button type="submit">
+        submit
+    </button>
+

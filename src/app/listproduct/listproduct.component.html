@@ -1,0 +1,29 @@
+
+
+<div class="row">
+    <ng-container  *ngFor="let gift of gifts;" style="width: 18rem;">
+        <div    class="col-3">
+        <div class="card">
+            <img class="card-img-top" src="{{gift.imageUrl}}" alt="Card image cap" width="30px" height="300px">
+            <div class="card-body">
+                <!-- <h5 class="card-title">{{value.id}}</h5> -->
+                <h5 class="card-title">{{gift.giftName}}</h5>
+                <p class="card-text">price - {{gift.giftPrice}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <!-- <li class="list-group-item" >foodType - {{foodDetail.foodType}}</li>
+                <li class="list-group-item" >foodStyle - [{{foodDetail.foodStyle}}]</li> -->
+            </ul>
+        <div>
+           <!-- <button><a routerLink="/updateproduct/{{gift.giftItemId}}">Update</a></button>-->
+        </div>
+
+        </div>
+    </div>
+</ng-container>
+</div>
+
+
+
+
+

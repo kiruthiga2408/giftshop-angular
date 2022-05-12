@@ -1,0 +1,23 @@
+<p>updateproduct works!</p>
+<form (ngSubmit)=" updateGiftProduct()" *ngIf="gift">
+    
+    <div>
+        <label for="giftName">Gift Name:</label>
+        <input type="text" name="giftName" [(ngModel)]="gift.giftName" placeholder="Enter Gift Name" required >
+    </div>
+    <br>
+    
+    <div>
+        <label for="giftPrice">Price:</label>
+        <input type="number" name="giftPrice" [(ngModel)]="gift.giftPrice"  placeholder="Enter Price" required >
+    </div>
+    <br>
+    
+    <div>
+    
+        <label for="imageUrl"> Gift Image URl</label>
+        <input type="text" name="imageUrl" [(ngModel)]="gift.imageUrl" placeholder="Enter Image url" required autofocus>
+     </div>
+        <button type="submit">submit </button>
+
+</form>
