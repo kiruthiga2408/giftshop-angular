@@ -1,0 +1,51 @@
+<style>
+    #form{
+        text-align: center;
+    }
+</style>
+
+
+
+<form id="form" (ngSubmit)="createTicket()">
+    <h3>Create Ticket</h3>
+    <div>
+    
+        <label for="userId">User id</label>
+        <input type="text" name="userId" [(ngModel)]="userId" placeholder="Enter User id" required autofocus>
+     </div>
+     <br>
+     <div>
+        <label for="category">Category</label>
+        <select name="category" id="category" [(ngModel)]="category">
+        <option value=disabled>--Select--</option>
+        <option value="order">Order</option>
+        <option value="payment">Payment</option>
+        <option value="delivery">Shipping</option>
+        <option value ="membership">MemberShip</option>
+        <option value="account">User Account</option>
+        <option value="others">Others</option>
+      </select>
+      </div>
+      <br>
+<div>
+    <label for="ticketTitle">Ticket Title</label>
+    <input type="text" name="ticketTitle" [(ngModel)]="ticketTitle" placeholder="Enter Ticket Title" required>  
+    
+</div>
+<br>
+<div>
+    <label for="description">Description</label>
+    <input type="textarea" name="description" [(ngModel)]="description" placeholder="Enter Ticket Description" required> 
+</div>
+<br>
+
+
+    <button type="submit">
+        Submit
+    </button>
+
+   
+</form>
+
+
+

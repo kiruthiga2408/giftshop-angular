@@ -13,6 +13,15 @@ import { RegisterComponent } from './register/register.component';
 import { RoleGuard } from './role.guard';
 import { ViewUserComponent } from './view-user/view-user.component';
 import { UpdateproductComponent } from './updateproduct/updateproduct.component';
+import { SupportComponent } from './support/support.component';
+import { MyorderComponent } from './myorder/myorder.component';
+import { CreateorderComponent } from './createorder/createorder.component';
+import { ListordersComponent } from './listorders/listorders.component';
+import { CreatereviewComponent } from './createreview-review/createreview/createreview.component';
+import { AdminModule } from './admin/admin.module';
+import { UserComponent } from './admin/user/user.component';
+import { UserModule } from './user/user.module';
+
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
@@ -28,6 +37,13 @@ const routes: Routes = [
   {path:'updateproduct/:id',component:UpdateproductComponent},
   {path:'listuser',component:ListuserComponent,canActivate:[AuthGuard,RoleGuard]},
   {path:'view-user',component:ViewUserComponent,canActivate:[AuthGuard]},
+  {path:'support',component:SupportComponent},
+  {path:'myorder',component:MyorderComponent},
+  {path:'createorder',component:CreateorderComponent},
+  {path:'listorders',component:ListordersComponent},
+  {path:'createreview',component:CreatereviewComponent},
+  {path:'admin',component:AdminModule},
+  {path:'user',component:UserModule},
   {path:'',redirectTo:'home',pathMatch:'full'}
 ];
 

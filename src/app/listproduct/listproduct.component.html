@@ -11,11 +11,10 @@
                 <p class="card-text">price - {{gift.giftPrice}}</p>
             </div>
             <ul class="list-group list-group-flush">
-                <!-- <li class="list-group-item" >foodType - {{foodDetail.foodType}}</li>
-                <li class="list-group-item" >foodStyle - [{{foodDetail.foodStyle}}]</li> -->
+                
             </ul>
         <div>
-           <!-- <button><a routerLink="/updateproduct/{{gift.giftItemId}}">Update</a></button>-->
+            <button type="button" (click)="addToCart(products)" class="btn btn-primary">Add To Cart</button>
         </div>
 
         </div>

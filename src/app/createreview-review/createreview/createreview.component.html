@@ -1,0 +1,42 @@
+<form (ngSubmit)="addReview()">
+
+    <div>
+        <label for="productId">ProductId</label>
+        <input type="productId" name="productId" [(ngModel)]="productId" placeholder="Enter Product Id" required  autofocus>
+    </div>
+    <br>
+    <div>
+        <label for="productName">ProductName</label>
+        <input type="productName" name="productName" [(ngModel)]="productName" placeholder="Enter Product Name" required  autofocus>
+    </div>
+    <br>
+    <div>
+        <label for="userId">UserId</label>
+        <input type="userId" name="userId" [(ngModel)]="userId" placeholder="Enter User Id" required  >
+    </div>
+<br>
+<div>
+     <label for="ratings">Ratings:</label>
+<select name="ratings" id="ratings" [(ngModel)]="ratings">
+    <option value="1" > 1-low</option>
+    
+    <option value="2">2-average</option>
+    <option value="3">3-good</option>
+    <option value="4">4-Best</option>
+    <option value="5">5-Excellent</option>
+</select>
+
+
+
+
+
+</div>
+<br>
+<div>
+    <label for="review">Reviews</label>
+    <input type="text" name="review" [(ngModel)]="review" placeholder="Enter review" required >
+</div>
+<br>
+<button type="submit">Submit</button>
+</form>
+

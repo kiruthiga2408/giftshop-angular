@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
 
 
+
+
 @Component({
   selector: 'app-listproduct',
   templateUrl: './listproduct.component.html',
@@ -15,6 +17,7 @@ export class ListproductComponent implements OnInit {
     ngOnInit(): void {
       this.displayAllGifts();
       this.remove;
+      
     }
     gifts!:any;
     displayAllGifts(){
@@ -26,6 +29,14 @@ export class ListproductComponent implements OnInit {
         }
         )
     }
+    products!:any;
+    giftItems:any;
+    addToCart(products:any){
+      this.giftItems.push(products);
+      localStorage.setItem("CART_ITEMS", JSON.stringify(this.giftItems));
+      this.toastrService.success("Add item to cart");
+    }
+  
     remove(id:any){
       let cfm = confirm("Do you want to delete ?");
       if(cfm){

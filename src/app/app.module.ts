@@ -17,10 +17,18 @@ import {HttpClientModule} from '@angular/common/http';
 import { ListgiftsComponent } from './listgifts/listgifts.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MyorderComponent } from './myorder/myorder.component';
+
 
 import { ToastrModule } from 'ngx-toastr';
 import { UpdateproductComponent } from './updateproduct/updateproduct.component';
+import { SupportComponent } from './support/support.component';
+import { CreateorderComponent } from './createorder/createorder.component';
+import { ListordersComponent } from './listorders/listorders.component';
+import { PaymentComponent } from './payment/payment.component';
+import { CreatereviewComponent } from './createreview-review/createreview/createreview.component';
 
+import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +43,14 @@ import { UpdateproductComponent } from './updateproduct/updateproduct.component'
     ViewUserComponent,
     ListgiftsComponent,
     AddproductComponent,
-    UpdateproductComponent
+    UpdateproductComponent,
+    SupportComponent,
+    MyorderComponent,
+    CreateorderComponent,
+    ListordersComponent,
+    PaymentComponent,
+    CreatereviewComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -44,7 +59,9 @@ import { UpdateproductComponent } from './updateproduct/updateproduct.component'
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgbCarouselModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

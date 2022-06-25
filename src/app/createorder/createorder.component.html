@@ -1,0 +1,54 @@
+<h3>Place Order </h3>
+<style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 5px;
+      text-align: left;
+    }
+    </style>
+
+<form  (ngSubmit)="createOrder()">
+    
+    <table style="width:100%">
+        <tr>
+          <th>User Id</th>
+          <td>{{userId}}</td>
+        </tr>
+        <tr>
+          <th>Amount(Rs)</th>
+          <td> {{amount}}</td>
+        </tr>
+        <tr>
+          <th>Coupon Code</th>
+          <td> 
+            <input type="text" id="couponCode" name="couponCode"[(ngModel)]="couponCode"  
+            /> <button type="button" (click)="applyCouponCode()">Apply</button> </td>
+            
+          </tr>
+        <tr>
+          <th>Discount(%)</th>
+          <td> 
+            <input type="text" id="discount" name="discount"[(ngModel)]="discountPercentage" readonly/> 
+            
+           </td>
+            
+          </tr>
+
+      <tr>
+        <th>Discount Amount </th>
+        <td>{{discount()}}</td>
+      </tr>
+
+          <tr>
+              <td>Total Amount</td>
+              <td>{{getTotalAmount()}}</td>
+            </tr>
+     
+      </table>
+      
+     
+  
+<button type="submit">Submit</button>
